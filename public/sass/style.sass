@@ -1,0 +1,444 @@
+/* base.scss */
+
+@import "susy"
+@import 'reset'
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600')
+
+// @import "compass/utilities/sprites"
+// @import "icons/*.png"
+// @include all-icons-sprites
+
+
+$font-stack: 'Roboto','Helvetica Neue', Helvetica,Arial,sans-serif
+$primary-color: #999
+$footer-color: #b3b3b3
+$primary-link-color: #04bdd8
+$radius: 0
+
+
+
+$susy: (columns: 12, gutters: 1/4 , gutter-position: split ,  container: 1120px, global-box-sizing: border-box )
+
+@include border-box-sizing
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+
+/* Container Styles */
+
+
+
+body
+  background-color: $footer-color
+  font: 100%
+  font-size: 0.9em
+  font-family: $font-stack
+  color: $primary-color
+  line-height: 1.5em
+  overflow-y: auto
+  overflow-x: hidden
+
+a 
+  outline: 0
+
+main
+  background-color: #f5f5f5
+
+
+header .container
+  @include container 
+
+
+
+section .container
+  @include container
+ 
+ 
+footer .container
+  @include container
+
+
+//grid
+
+.col-twelve
+  @include span(12)
+ 
+.col-eleven
+  @include span(11)
+  min-height: 150px
+  background-color: #ccc
+.col-ten
+  @include span(10)
+  min-height: 150px
+  background-color: #ccc
+.col-nine
+  @include span(9)
+  
+.col-eight
+  @include span(8)
+  min-height: 150px
+  //background-color: #ccc
+.col-seven
+  @include span(7)
+  min-height: 150px
+  background-color: #ccc
+.col-six
+  @include span(6)
+ 
+.col-five
+  @include span(5)
+  min-height: 150px
+  background-color: #ccc
+.col-four
+  @include span(4)
+  //min-height: 150px
+  //background-color: #ccc
+.col-three
+  @include span(3)
+  
+.col-two
+  @include span(2)
+  
+  
+.col-one
+  @include span(1)
+  min-height: 150px
+  background-color: #ccc
+
+//Site styles
+
+
+section
+  padding-top: 1px
+  
+
+p
+  margin: 1em 0 1em 0
+
+strong , label
+  font-weight: 600
+
+
+h1
+  font-size: 2em
+  line-height: 1em
+  margin: 1em 0 1em 0
+
+
+hr
+  background-color: #ccc
+  height: 1px
+  border: 0
+  
+
+.brand 
+  float: left
+  font-size:  1.5em
+  margin: 1.5em 0 0 0
+  color: #FFF
+
+
+#top_bar
+  background: #000
+
+#login_info  
+  float: right
+  color: #FFF
+
+#login_info li 
+  float: left
+  padding: 0.5em 0.5em 0.5em 0.5em
+
+#login_info li:last-child
+  padding-right: 0
+
+
+.main-menu 
+  float: right
+  margin-right: 1%
+  text-transform: uppercase
+
+
+.main-menu li 
+  //display: inline-block
+  float: left
+  margin: 30px 1px 30px 1px
+
+
+.main-menu li  a 
+  color: #FFF
+  text-decoration: none
+  padding: 15px 15px 15px 15px
+  background-color: transparent
+  font-size: 1em
+  //height: 100px
+  height: 100%
+  transition: all 0.5s ease-out 0s
+
+
+.main-menu li  a:hover ,  .main-menu li  a:active
+  color: #FFF
+  text-decoration: none
+  //background-color: transparent
+  background-color: rgba(0,0,0,0.3)
+
+
+main a , main a:hover , main a:visited , main a:active
+  color: $primary-link-color
+  text-decoration: none
+
+
+
+
+footer
+  position: relative
+  width: 100%
+  background-color: $footer-color 
+  
+
+footer .container
+  height: 300px
+  padding-top: 1px 
+  color: #666666
+ 
+
+=small-screen()
+  float: none
+  width: 95%
+  margin: 0 2.5% 10px 2.5%
+
+
+.box
+  +border-radius(10px)
+
+
+
+
+//tables
+
+.table 
+  width: 100%
+  max-width: 100%
+  margin: 1em 0 1em 0
+
+.table
+  border-spacing: 0
+  border-collapse: collapse
+
+
+
+.table thead
+  border-bottom: 2px solid #ddd
+
+
+.table thead tr th 
+  padding: 8px
+  background-color: #000
+  font-weight: 600
+  color: #FFF
+
+
+.table tbody tr td
+  border-bottom: 1px solid #ddd
+  padding: 8px
+ 
+
+//table tbody a  , table tbody a:active , table tbody a:hover , table tbody a:visited
+  //color: #D0D0D0
+
+.table th
+  text-align: left
+
+
+.table tr
+  padding: 8px
+
+
+.table tbody tr:nth-child(even) 
+  background-color: #D0D0D0
+  color: #FFF
+
+.table tbody tr:nth-child(odd) 
+  background: #FFF
+
+.toggle-nav
+  cursor: pointer
+  color: #d34032
+
+
+
+//forms
+
+input[type="text"] , input[type="email"], input[type="password"] , textarea , input[type="tel"]  
+  background-color: #e6e7e8
+  border: solid 2px #e6e7e8
+  padding: 10px
+  width: 100%
+  margin: 10px 0 10px 0
+  font-size: 0.9em
+  border: 1px solid #e6e7e8
+  transition: border 0.5s ease-out 0s
+
+input[type="text"]:focus , input[type="email"]:focus ,input[type="password"]:focus, textarea:focus 
+  background-color: #e6e7e8
+  border: 1px solid #80ccff
+
+input[type="submit"] , button
+  padding: 10px
+  border: none
+  background-color: #4db8ff
+  color: #FFF
+  width: auto
+  text-transform: uppercase
+  transition: all 0.5s ease-out 0s
+  margin: 20px 0 20px 0
+  cursor: pointer
+  color: #FFF
+  +border-radius(3px)
+
+input[type="submit"]:hover , button:hover
+  background-color: #80ccff
+  color: #000
+
+textarea
+  height: 312px
+  font-size: 0.9em
+  font-family: $font-stack
+
+
+
+.alert-danger
+  color: #a94442
+  background-color: #f2dede
+  border-color: #ebccd1
+
+
+.alert 
+  padding: 15px
+  margin: 1em 0
+  width: 100%
+  border: 1px solid transparent
+  +border-radius(4px)
+
+.alert-success 
+  color: #3c763d
+  background-color: #dff0d8
+  border-color: #d6e9c6
+
+.preloader 
+  background: url("../images/89.gif") center center no-repeat #ffffff
+
+#preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #D0D0D0
+  z-index: 9999999
+
+#status 
+  width: 200px
+  height: 200px
+  position: absolute
+  left: 50%
+  top: 50%
+  background-image: url("../images/status.gif")
+  background-repeat: no-repeat
+  background-position: center
+  margin: -100px 0 0 -100px
+
+
+
+#media_results
+  background: #FFF
+
+
+.pagination li 
+  float: left
+  padding: 0 0.5em 0 0.5em
+
+
+
+.media-thumb 
+  width: calc(100% / 4)
+  float: left
+  margin: 0 
+  position: relative
+
+
+.media-thumb-alt 
+
+
+
+.media-thumb img 
+  width: 98%
+  margin: 2px 1% 2px 1%
+  height: auto
+  display: block
+
+.media-thumb-alt 
+  float: left
+  margin: 0 
+  position: relative
+
+.media-thumb-alt img 
+  max-height: 150px
+
+.image-delete
+  position: absolute
+  right: 10px
+  top: 4px
+  cursor: pointer
+
+
+.profile-image
+  width: 100%
+  height: auto
+
+.media-profile
+  background: #FFF
+  padding-top: 0.5em
+
+.media-info
+  background: #f5f5f5
+  padding: 0 0.5em
+
+
+
+@media screen and (max-width: 768px)
+  .sidebar 
+    +small-screen()
+  .col-twelve
+    +small-screen()
+  .col-eleven
+    +small-screen()
+  .col-ten
+    +small-screen()
+  .col-nine
+    +small-screen()
+  .col-eight
+    +small-screen()
+  .col-seven
+    +small-screen()
+  .col-six
+    +small-screen()
+  .col-five
+    +small-screen()
+  .col-four
+    +small-screen()
+  .col-three
+    +small-screen()
+  .col-two
+    +small-screen()
+  .col-one
+    +small-screen()
+  
+
+  
+
