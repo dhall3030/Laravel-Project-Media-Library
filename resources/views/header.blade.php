@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title of the document</title>
+<title>Media Library</title>
 
 <script src="{{ App::make('url')->to('/') }}/js/main.js"></script>
 
