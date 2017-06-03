@@ -276,7 +276,7 @@ class MediaLibController extends Controller
 	    File::delete($thumbPath);
 
 
-	    //die('It works!');
+	    
 	    
 	    return Redirect::to('/update-media/'.$image->media_id)->withFlashMessage('Image Deleted Successfully.');
 

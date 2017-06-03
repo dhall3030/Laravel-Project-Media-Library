@@ -54,7 +54,7 @@ class UserController extends Controller
                                 
             } else {
 
-                 //die('hello');
+                
 
 
                  $email=Input::get('email');
@@ -77,9 +77,7 @@ class UserController extends Controller
 
                      $date = date('Y-m-d H:i:s');
 
-               //  	 $name = 'Dorian Hall' ;
-               //  	 $email ='dorian.hall@gmail.com' ;
-            		 // $password ='voltron' ;
+               
             		 
 
                      $name=Input::get('name');
